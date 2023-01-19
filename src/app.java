@@ -46,6 +46,7 @@ public class app {
             for (Catalog catalog: entityCursor){
                 if (catalog.getId() == 1)
                 {
+                    catalog.setName("111");
                     entityCursor.update(catalog);
                 }
             }
