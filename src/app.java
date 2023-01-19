@@ -35,7 +35,7 @@ public class app {
     public static void Lab4() {
         CatalogDA catalogDA = new CatalogDA(Database.getStore());
         try (EntityCursor<Catalog> entityCursor = catalogDA.cursor()) {
-            for (Catalog catalog: entityCursor){
+            for (Catalog catalog : entityCursor) {
                 if (catalog.getId() == 1) {
                     System.out.println(catalog);
                 }
@@ -43,9 +43,8 @@ public class app {
         }
 
         try (EntityCursor<Catalog> entityCursor = catalogDA.cursor()) {
-            for (Catalog catalog: entityCursor){
-                if (catalog.getId() == 1)
-                {
+            for (Catalog catalog : entityCursor) {
+                if (catalog.getId() == 1) {
                     catalog.setName("111");
                     entityCursor.update(catalog);
                 }
